@@ -5,10 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <div class="wrapper">
-
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Socials</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <div class="box left-box">
+                <div class="img-container">
+                    <img src="/images/ComfyUI_00035_.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="box right-box">Right Container</div>
+        </div>
     </div>
+
 </body>
 </html>
+
+<style>
+    .container {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 80px); /* Adjust height to leave space for navbar */
+        position: absolute;
+        top: 80px;
+    }
+
+    .box {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        color: white;
+    }
+
+ 
+</style>
