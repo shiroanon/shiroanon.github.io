@@ -11,6 +11,24 @@ body {
     font-family: "Ysabeau", sans-serif;
     margin: 0;
 }
+.container {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 80px); /* Adjust height to leave space for navbar */
+    position: absolute;
+    top: 80px;
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+}
+
+
 
 .wrapper {
     background-color: rgba(255, 255, 255, 0.25);
