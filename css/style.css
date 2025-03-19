@@ -88,7 +88,10 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     border-radius: 10px; /* Optional: Rounds the corners */
+    position: relative;
+    top: -60px; /* Moves the container slightly up */
 }
+
 
 .img-container img {
     width: 100%;
@@ -109,3 +112,15 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
 }
+.footer {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    background: rgba(101, 100, 100, 0.25);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
