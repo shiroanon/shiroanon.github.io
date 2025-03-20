@@ -194,8 +194,9 @@ nav > ul > li > a {
     background-color: rgba(101, 100, 101, 0.242);
     margin-top: -80px;
     border-radius: 20px;
-    padding: 30px; 
-    backdrop-filter: blux(5px)
+    padding: 0px; 
+    backdrop-filter: blux(5px);
+    overflow:hidden
     ;/* Move it up slightly */
 }
 
@@ -389,6 +390,10 @@ nav > ul > li > a {
         padding: 12px 0;
         border-radius: 15px;
     }
+    .introduction-container{
+        margin-top: -20px;
+        padding: 10px;
+    }
 
     @keyframes expandWidth {
         from { width: 0%; left: 50% }
@@ -425,6 +430,9 @@ nav > ul > li > a {
     /* Adjust animation timing for mobile */
     nav {
         animation: expandWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .mobile-width{
+        animation: collapseWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;;
     }
 }
 
