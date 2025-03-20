@@ -10,6 +10,34 @@ body {
     margin: 0;
     font-family: "Ysabeau", sans-serif;
 }
+.wrapper {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    height: calc(100% - 60px);
+    width: calc(100% - 60px);
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    border-radius: 25px;
+    z-index: 1;
+    overflow: hidden;
+}
+nav {
+    background: rgba(101, 100, 100, 0.25);
+    padding: 10px 0;
+    position: fixed;
+    width: 0%; /* Start from 0 width */
+    top: 5%;
+    left: 50%; /* Start centered */
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    overflow: hidden;
+    z-index: 3;
+    animation: expandWidth 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
 
 .container {
     display: flex;
@@ -64,34 +92,7 @@ body {
 
 
 
-.wrapper {
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    display: flex;
-    height: calc(100% - 60px);
-    width: calc(100% - 60px);
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    border-radius: 25px;
-    z-index: 1;
-    overflow: hidden;
-}
-nav {
-    background: rgba(101, 100, 100, 0.25);
-    padding: 10px 0;
-    position: fixed;
-    width: 0%; /* Start from 0 width */
-    top: 5%;
-    left: 50%; /* Start centered */
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    overflow: hidden;
-    z-index: 3;
-    animation: expandWidth 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
+
 
 @keyframes expandWidth {
     from {
@@ -232,12 +233,15 @@ nav > ul > li > a {
     height: 2px; /* Thickness of the line */
     background-color: white; /* Color of the line */
     transform: translateX(-50%);
+    
 }
 .like , .arch {
-    font-size: small;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 .cool{
-    font-size: x-large; 
+    font-size: 1.4rem;
+    font-weight: 500; 
 }
 
 
@@ -270,4 +274,81 @@ nav > ul > li > a {
     to {
         bottom: 0px; /* Final position */
     }
+}
+/* Add these new animations to your CSS */
+@keyframes collapseWidth {
+    from { width: 60%;opacity: 1; left: 20% }
+    to { width:  0%;opacity: 0; left: 50% }
+}
+
+@keyframes slideOutLeft {
+    from { transform: translateX(0) }
+    to { transform: translateX(-100%) }
+}
+
+@keyframes slideOutRight {
+    from { transform: translateX(0) }
+    to { transform: translateX(100%) }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
+@keyframes slideDownFooter {
+    from { bottom: 0 }
+    to { bottom: -100px }
+}
+/* Add this to your CSS */
+@keyframes contractLine {
+    from {
+        height: 55%;
+    }
+    to {
+        height: 0%;
+    }
+}
+
+/* Add this class for the animation */
+.contract-line {
+    animation: contractLine 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* Add these transition classes */
+.nav-exit {
+    animation: collapseWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.left-exit {
+    animation: slideOutLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.right-exit {
+    animation: slideOutRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.background-exit {
+    animation: fadeOut 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.footer-exit {
+    animation: slideDownFooter 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.container-exit{
+    animation: contcontractLine 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+/* Add this to your CSS */
+@keyframes darkenWrapper {
+    from {
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    }
+}
+
+.wrapper-exit {
+    animation: darkenWrapper 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
