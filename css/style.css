@@ -149,7 +149,7 @@ nav > ul > li > a {
 
 .top-section {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0);
     padding: 5px 20%; /* Adjust width */
     display: flex;
     align-items: center;
@@ -159,11 +159,15 @@ nav > ul > li > a {
 
 .bottom-section {
     flex: 3;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 5px 20%; /* Adjust width */
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 5px 5%; /* Adjust width */
     display: flex;
     align-items: center;
+    font-size: medium;
+    color: #000000;
     justify-content: center;
+    text-align: center;
 }
 
 /* Horizontal line */
