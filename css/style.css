@@ -34,6 +34,33 @@ body {
     justify-content: center;
     align-items: center;
 }
+.left-box {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    animation: slideInLeft 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.right-box {
+    transform: translateX(100%); /* Start off-screen to the right */
+    animation: slideInRight 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 
 
@@ -54,16 +81,30 @@ nav {
     background: rgba(101, 100, 100, 0.25);
     padding: 10px 0;
     position: fixed;
-    width: 60%;
+    width: 0%; /* Start from 0 width */
     top: 5%;
-    left: 20%;
+    left: 50%; /* Start centered */
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
     text-align: center;
     overflow: hidden;
     z-index: 3;
+    animation: expandWidth 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+@keyframes expandWidth {
+    from {
+        width: 0%;
+        left: 50%;
+    }
+    to {
+        width: 60%; /* Final width */
+        left: 20%; /* Adjust to keep it centered */
+    }
+}
+
+
 
 nav ul {
     list-style: none;
@@ -181,6 +222,12 @@ nav > ul > li > a {
     background-color: white; /* Color of the line */
     transform: translateX(-50%);
 }
+.like , .arch {
+    font-size: small;
+}
+.cool{
+    font-size: x-large; 
+}
 
 
 .background img {
@@ -190,7 +237,7 @@ nav > ul > li > a {
 }
 .footer {
     position: fixed;
-    bottom: 0px;
+    bottom: -100px; /* Start off-screen */
     left: 0;
     width: 100%;
     background: rgba(101, 100, 100, 0.25);
@@ -202,5 +249,14 @@ nav > ul > li > a {
     overflow: hidden;
     z-index: 3;
     backdrop-filter: blur(10px);
+    animation: slideUpFooter 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+@keyframes slideUpFooter {
+    from {
+        bottom: -100px; /* Start below screen */
+    }
+    to {
+        bottom: 0px; /* Final position */
+    }
+}
