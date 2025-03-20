@@ -86,7 +86,7 @@ nav {
     left: 50%; /* Start centered */
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     text-align: center;
     overflow: hidden;
     z-index: 3;
@@ -168,10 +168,21 @@ nav > ul > li > a {
     top: 15%;
     left: 50%;
     width: 2px;
-    height: 55%;
+    height: 0%; /* Start from 0 height */
     background-color: white; 
     transform: translateX(0%);
+    animation: expandLine 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
+
+@keyframes expandLine {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 55%; /* Final height */
+    }
+}
+
 .introduction-container {
     display: flex;
     flex-direction: column;
@@ -248,7 +259,7 @@ nav > ul > li > a {
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
     z-index: 3;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     animation: slideUpFooter 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
