@@ -221,6 +221,7 @@ nav > ul > li > a {
     color: #000000;
     justify-content: center;
     text-align: center;
+    padding: 3%;
 }
 
 /* Horizontal line */
@@ -351,4 +352,161 @@ nav > ul > li > a {
 
 .wrapper-exit {
     animation: darkenWrapper 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@media (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .container::before {
+        position: absolute;
+        top: 45%;
+        left: 25%;
+        height: 2px;
+        width: 0%; /* Start from 0 width */
+        background-color: white; 
+        transform: translateX(0%);
+        animation: expandLine 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes expandLine {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 55%; /* Final height */
+        }
+    }
+    .introduction-container{
+        width:100%;
+        height: 90%;
+        padding: 1%;
+    }
+    /* Updated Mobile Navbar Styles */
+@media (max-width: 768px) {
+    nav {
+        top: 2%;
+        width: 90% !important; /* Full width with some margin */
+        left: 5% !important;
+        padding: 12px 0;
+        border-radius: 15px;
+    }
+
+    @keyframes expandWidth {
+        from { width: 0%; left: 50% }
+        to { width: 90% !important; left: 5% !important }
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        gap: 8px;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Vertical spacing between items */
+    }
+
+    nav ul li a {
+        font-size: 1.1rem !important;
+        padding: 14px 20px !important;
+        display: block; /* Full-width click targets */
+        width: 100%;
+    }
+
+    /* Better touch interaction states */
+    nav ul li a:active {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(0.98);
+    }
+
+    /* Remove hover effects on mobile */
+    nav ul li a:hover {
+        background: transparent;
+    }
+
+    /* Adjust animation timing for mobile */
+    nav {
+        animation: expandWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+}
+
+    
+}
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+    padding: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on mobile */
+    }
+
+    nav {
+        position: fixed;
+        top: 70px;
+        left: 5% !important;
+        width: 90% !important;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        animation: none !important; /* Disable initial animation */
+    }
+
+    nav.active {
+        max-height: 500px; /* Adjust based on content */
+        padding: 15px 0;
+        opacity: 1;
+    }
+
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Updated Nav List */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 16px 20px !important;
+        font-size: 1.2rem !important;
+    }
+    .bottom-section{
+        color: white !important;
+    }
 }
