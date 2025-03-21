@@ -33,12 +33,6 @@ nav {
   background-color: rgba(0, 0, 0, 0.315);
   backdrop-filter: blur(10px);
   color: #fff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: none;
-  z-index: 3;
 }
 nav.active {
   display: flex;
