@@ -8,12 +8,13 @@ body {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
+  display :grid
 }
 
 
 main {
   display: grid;
-  grid-template-rows: max-content auto ;
+  grid-template-columns: max-content auto max-content max-content;
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.265);
   backdrop-filter: blur(10px);
@@ -61,8 +62,8 @@ nav.active {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
