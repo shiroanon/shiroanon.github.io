@@ -17,7 +17,7 @@ main {
   padding: 1em;
   background-color: rgba(0, 0, 0, 0.265);
   backdrop-filter: blur(10px);
-  height: 100vh;
+ 
 }
 
 .hamburger {
