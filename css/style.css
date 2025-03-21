@@ -1,520 +1,129 @@
+/* Base Styles */
 body {
-    background-color: #000000;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: "Ysabeau", sans-serif;
+  background-color: #000000;
+  padding: 1rem;
+  font-family: "Ysabeau", sans-serif;
+  background-image: url("/images/ComfyUI_00121_.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
-.wrapper {
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    display: flex;
-    height: calc(100% - 60px);
-    width: calc(100% - 60px);
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    border-radius: 25px;
-    z-index: 1;
-    overflow: hidden;
+
+main {
+  display: grid;
+  grid-template-rows: max-content auto;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.265);
+  backdrop-filter: blur(10px);
+  height: 100vh;
 }
+
+.hamburger {
+  z-index: 4;
+  width: 2rem;
+  height: 2rem;
+}
+
 nav {
-    background: rgba(101, 100, 100, 0.25);
-    padding: 10px 0;
-    position: fixed;
-    width: 0%; /* Start from 0 width */
-    top: 5%;
-    left: 50%; /* Start centered */
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px);
-    text-align: center;
-    overflow: hidden;
-    z-index: 3;
-    animation: expandWidth 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+  z-index: 3;
+}
+nav.active {
+  display: flex;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    height: calc(100% - 80px); 
-    position: absolute;
-    top: 80px;
-    z-index: 2;
+.img-container {
+  width: 40%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  margin-top: -2rem; 
 }
 
-.box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: white;
-
-}
-.box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.left-box {
-    transform: translateX(-100%); /* Start off-screen to the left */
-    animation: slideInLeft 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transform: scale(1.2);
 }
 
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(156, 156, 156, 0.432);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
 }
 
 .right-box {
-    transform: translateX(100%); /* Start off-screen to the right */
-    animation: slideInRight 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
+  background-color: rgba(0, 0, 0, 0);
 
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-
-
-
-
-@keyframes expandWidth {
-    from {
-        width: 0%;
-        left: 50%;
-    }
-    to {
-        width: 60%; /* Final width */
-        left: 20%; /* Adjust to keep it centered */
-    }
-}
-
-
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding:12px;
-   
-}
-
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 2px;
-}
-nav > ul > li > a {
-    font-size:1.3rem  /* Your desired size */
-}
-.img-container {
-    width: 40%; 
-    aspect-ratio: 1 / 1; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px; 
-    position: relative;
-    top: -60px; 
-}
-
-
-.img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    object-position: top;
-    scale: 1.2; 
-}
-
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -100;
-}
-.container::before {
-    content: "";
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    width: 2px;
-    height: 0%; /* Start from 0 height */
-    background-color: white; 
-    transform: translateX(0%);
-    animation: expandLine 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes expandLine {
-    from {
-        height: 0%;
-    }
-    to {
-        height: 55%; /* Final height */
-    }
+  color: #fff;
+  text-align: center;
 }
 
 .introduction-container {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(101, 100, 101, 0.242);
-    margin-top: -80px;
-    border-radius: 20px;
-    padding: 0px; 
-    backdrop-filter: blux(5px);
-    overflow:hidden
-    ;/* Move it up slightly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  border-radius: 25px;
 }
 
-
-.top-section {
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 5px 20%; /* Adjust width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.bottom-section {
-    flex: 3;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0);
-    padding: 5px 5%; /* Adjust width */
-    display: flex;
-    align-items: center;
-    font-size: medium;
-    color: #000000;
-    justify-content: center;
-    text-align: center;
-    padding: 3%;
-}
-
-/* Horizontal line */
-.top-section::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 60%; /* Adjust width of the line */
-    height: 2px; /* Thickness of the line */
-    background-color: white; /* Color of the line */
-    transform: translateX(-50%);
-    
-}
-.like , .arch {
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-.cool{
-    font-size: 1.4rem;
-    font-weight: 500; 
-}
-
-
-.background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 .footer {
-    position: fixed;
-    bottom: -100px; /* Start off-screen */
-    left: 0;
-    width: 100%;
-    background: rgba(101, 100, 100, 0.25);
-    color: white;
-    text-align: center;
-    height: 10%;
-    padding: 10px;
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
-    overflow: hidden;
-    z-index: 3;
-    backdrop-filter: blur(5px);
-    animation: slideUpFooter 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  padding: 0%;
+  background-color: rgba(110, 110, 110, 0.236);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  max-height: 2rem;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-@keyframes slideUpFooter {
-    from {
-        bottom: -100px; /* Start below screen */
-    }
-    to {
-        bottom: 0px; /* Final position */
-    }
-}
-/* Add these new animations to your CSS */
-@keyframes collapseWidth {
-    from { width: 60%;opacity: 1; left: 20% }
-    to { width:  0%;opacity: 0; left: 50% }
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure boxes take full width in mobile view */
 }
 
-@keyframes slideOutLeft {
-    from { transform: translateX(0) }
-    to { transform: translateX(-100%) }
-}
+/* For desktop view */
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+  }
 
-@keyframes slideOutRight {
-    from { transform: translateX(0) }
-    to { transform: translateX(100%) }
-}
-
-@keyframes fadeOut {
-    from { opacity: 1 }
-    to { opacity: 0 }
-}
-
-@keyframes slideDownFooter {
-    from { bottom: 0 }
-    to { bottom: -100px }
-}
-/* Add this to your CSS */
-@keyframes contractLine {
-    from {
-        height: 55%;
-    }
-    to {
-        height: 0%;
-    }
-}
-
-/* Add this class for the animation */
-.contract-line {
-    animation: contractLine 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-
-/* Add these transition classes */
-.nav-exit {
-    animation: collapseWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.left-exit {
-    animation: slideOutLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.right-exit {
-    animation: slideOutRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.background-exit {
-    animation: fadeOut 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.footer-exit {
-    animation: slideDownFooter 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-.container-exit{
-    animation: contcontractLine 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-/* Add this to your CSS */
-@keyframes darkenWrapper {
-    from {
-        background-color: rgba(255, 255, 255, 0.25);
-    }
-    to {
-        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    }
-}
-
-.wrapper-exit {
-    animation: darkenWrapper 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-@media (max-width: 768px){
-    .container{
-        flex-direction: column;
-    }
-    .container::before {
-        position: absolute;
-        top: 45%;
-        left: 25%;
-        height: 2px;
-        width: 0%; /* Start from 0 width */
-        background-color: white; 
-        transform: translateX(0%);
-        animation: expandLine 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-    @keyframes expandLine {
-        from {
-            width: 0%;
-        }
-        to {
-            width: 55%; /* Final height */
-        }
-    }
-    .introduction-container{
-        width:100%;
-        height: 90%;
-        padding: 1%;
-    }
-    /* Updated Mobile Navbar Styles */
-@media (max-width: 768px) {
-    nav {
-        top: 2%;
-        width: 90% !important; /* Full width with some margin */
-        left: 5% !important;
-        padding: 12px 0;
-        border-radius: 15px;
-    }
-    .introduction-container{
-        margin-top: -20px;
-        padding: 10px;
-    }
-
-    @keyframes expandWidth {
-        from { width: 0%; left: 50% }
-        to { width: 90% !important; left: 5% !important }
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        gap: 8px;
-    }
-
-    nav ul li {
-        margin: 5px 0; /* Vertical spacing between items */
-    }
-
-    nav ul li a {
-        font-size: 1.1rem !important;
-        padding: 14px 20px !important;
-        display: block; /* Full-width click targets */
-        width: 100%;
-    }
-
-    /* Better touch interaction states */
-    nav ul li a:active {
-        background: rgba(255, 255, 255, 0.3);
-        transform: scale(0.98);
-    }
-
-    /* Remove hover effects on mobile */
-    nav ul li a:hover {
-        background: transparent;
-    }
-
-    /* Adjust animation timing for mobile */
-    nav {
-        animation: expandWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
-    .mobile-width{
-        animation: collapseWidth 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;;
-    }
-}
-
-    
-}
-/* Hamburger Menu Styles */
-.hamburger {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 6px;
-    padding: 8px;
-    cursor: pointer;
-    backdrop-filter: blur(5px);
-    transition: all 0.3s ease;
-}
-
-.hamburger .bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    margin: 5px 0;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; /* Show on mobile */
-    }
-
-    nav {
-        position: fixed;
-        top: 70px;
-        left: 5% !important;
-        width: 90% !important;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        transition: all 0.3s ease;
-        animation: none !important; /* Disable initial animation */
-    }
-
-    nav.active {
-        max-height: 500px; /* Adjust based on content */
-        padding: 15px 0;
-        opacity: 1;
-    }
-
-    /* Hamburger Animation */
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-    
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    /* Updated Nav List */
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        padding: 16px 20px !important;
-        font-size: 1.2rem !important;
-    }
-    .bottom-section{
-        color: white !important;
-    }
+  .box {
+    width: 50%; /* Each box takes half the width in desktop view */
+  }
+  section {
+    flex-direction: row;
+  }
+  .hamburger {
+    display: none;
+  }
 }

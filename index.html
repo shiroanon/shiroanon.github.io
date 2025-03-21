@@ -10,12 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Ysabeau:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="background"> 
-        <img src="/images/ComfyUI_00121_.webp" alt="" srcset="">
-    </div>
-    <!-- Add this to your HTML -->
-
-    <div class="wrapper">
+    <main>
         <button class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -28,8 +23,8 @@
                 <li><a href="socials.html">Socials</a></li>
             </ul>
         </nav>
-        
-        <div class="container">
+       
+        <section>
             <div class="box left-box">
                 <div class="img-container">
                     <img src="/images/ComfyUI_00035_.webp" alt="" srcset="">
@@ -44,65 +39,14 @@
                         <p>GNU/Linux , WebDevelopment [HTML/CSS/JS] , Graphics Design , FOSS , AI[ComfyUI,ollama ] , Python , Jupyter Notebook , Blender</p>
                         <p class="arch">& I use Arch btw XD.</p>
                     </div>
-                    
-                
-            </div>
-        </div>
+                </div>
+        </section>
         <div class="footer">This is my footer i will write whatever i want </div>
-    </div>
- 
+      
+    </main>
     <script>
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = this.href;
-        
-                // Add wrapper animation
-                document.querySelector('.wrapper').classList.add('wrapper-exit');
-        
-                // Rest of existing animations
-                document.querySelector('.container').classList.add('contract-line');
-                document.querySelector('.container').classList.add('mobile-width');
-                document.querySelector('nav').classList.add('nav-exit');
-                document.querySelector('.left-box').classList.add('left-exit');
-                document.querySelector('.right-box').classList.add('right-exit');
-                document.querySelector('.background').classList.add('background-exit');
-                document.querySelector('.footer').classList.add('footer-exit');
-                
-        
-                setTimeout(() => {
-                    window.location.href = target;
-                }, 1000);
-            });
-        });
-        // Add this JavaScript to handle toggle functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('nav');
-    
-    // Toggle menu
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-        }
-    });
-
-    // Close menu after clicking a link
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            nav.classList.remove('active');
-        });
-    });
-});
-        </script>
+  
+    </script>
 </body>
 </html>
 
