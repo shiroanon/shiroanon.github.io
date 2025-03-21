@@ -93,25 +93,16 @@ section {
   text-align: center;
   border-radius: 25px;
 }
-
 .footer {
-  padding: 0%;
   background-color: rgba(110, 110, 110, 0.236);
   backdrop-filter: blur(10px);
-  color: #fff;
-  text-align: center;
-  max-height: 2rem;
-
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 .box {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; /* Ensure boxes take full width in mobile view */
+  width: 100%; 
 }
 
 /* For desktop view */
@@ -121,7 +112,7 @@ section {
   }
 
   .box {
-    width: 50%; /* Each box takes half the width in desktop view */
+    width: 50%; 
   }
   section {
     flex-direction: row;
