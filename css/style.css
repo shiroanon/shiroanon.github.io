@@ -29,11 +29,10 @@ main {
   width: 2rem;
   height: 2rem;
 }
-.new{
-  padding: 2em;
-}
+
 nav {
   gap: 1rem;
+ margin: 2em;
  
   background-color: rgba(0, 0, 0, 0.315);
   backdrop-filter: blur(10px);
