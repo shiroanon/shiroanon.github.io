@@ -24,7 +24,7 @@ document.querySelectorAll('nav a').forEach(link => {
 // Add this JavaScript to handle toggle functionality
 document.addEventListener('DOMContentLoaded', () => {
 const hamburger = document.querySelector('.hamburger');
-const nav = document.querySelector('nav');
+const nav = document.querySelector('ul');
 
 // Toggle menu
 hamburger.addEventListener('click', () => {
