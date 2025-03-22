@@ -18,7 +18,7 @@ main {
 
   border-radius: 25px;
 
-  background-color: rgba(0, 0, 0, 0.265);
+  background-color: rgba(120, 120, 120, 0.257);
   backdrop-filter: blur(10px);
   overflow-x: hidden;
 }
@@ -65,15 +65,47 @@ main {
   color: #000000;
   margin-bottom: 1em;
 }
+.cool{
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 1em;
+}
+.like  {
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 1em;
+}
+.arch  {
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-bottom: 1em;
+}
+p{
+  text-align: center;
+  font-size: 1.5em;
+  
+  color: #000000;
+  margin-bottom: 1em;
+}
 .line-vertical {
   height: 2px;
   width: 100%;
   background: white;
   margin: 0 1em;
 }
+* {
+  transition: all 1s ease-in-out;
+}
+
 
 .separator {
-  height: 2px;
+  height: 0.09em;
   width: 70%;
   background: white;
   margin: 0 auto;
@@ -124,7 +156,7 @@ nav ul li a {
   font-size: 1.2rem;
 }
 .img-container {
-  width: 15em;
+  width: 20em;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 25px;
@@ -143,7 +175,7 @@ nav ul li a {
 section {
   display: grid;
   justify-content: center;
-  background-color: rgba(156, 156, 156, 0.432);
+  background-color: rgba(0, 0, 0, 0.533);
   backdrop-filter: blur(10px);
   color: #fff;
   text-align: center;
@@ -156,28 +188,32 @@ section {
 }
 
 .introduction {
+  isolation: isolate; /* Ensures it is not affected by parent's backdrop-filter */
+  backdrop-filter: blur(1px); /* Your desired blur effect */
+  background-color: rgba(0, 0, 0, 0.093);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1em;
+  
   justify-content: center;
-
-  background-color: rgba(149, 149, 149, 0.315);
-  backdrop-filter: blur(10px);
   color: #fff;
   text-align: center;
   border-radius: 25px 25px 0px 0px;
 }
+
 .footer {
-  backdrop-filter: blur(10px);
+  
   width: 100%;
   padding: 1.4em;
   text-align: center;
+  font-size: 1.2em; 
+  color: #fff;
 
   background-image: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.165),
-    rgba(110, 110, 110, 0.424)
+    rgba(91, 91, 91, 0.125),rgba(72, 72, 72, 0.144),
+    rgba(121, 121, 121, 0.155)
   );
 }
 
@@ -190,8 +226,16 @@ section {
 .container {
   display: grid;
   grid-template-rows: auto 10px auto ; 
+  isolation: isolate; /* Ensures it is not affected by parent's backdrop-filter */
+  backdrop-filter: blur(1px); /* Your desired blur effect */
+  
   gap: 1em;
 }
+.top-section , .arch , .cool , .like  ,p , .line {
+  
+  color: #fff;
+}
+
 
 @media (min-width: 768px) {
   nav {
@@ -238,17 +282,23 @@ section {
   }
   .separator{
     height: 60%;
-    width: 1px;
+    width: 0.09em;
     background-color: #fff;
   }
 
   .left-box {
     order: -1;
   }
+
   .introduction {
     border-radius: 32px;
+    border: 1px solid #fff;
     padding: 2em;
     margin: 15%;
+  }
+  .top-section , .arch , .cool , .like  ,p , .line {
+  
+    color: #000000;
   }
   .footer {
     color: rgb(255, 255, 255);
