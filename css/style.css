@@ -8,6 +8,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   min-height: 100vh;
+  padding: 2em;
   display: grid;
   
 }
@@ -243,6 +244,10 @@ section {
 
 
 @media (min-width: 768px) {
+  main{
+    
+    grid-template-rows: 7rem 70% 6rem;
+  }
 
   nav {
     display: flex;
