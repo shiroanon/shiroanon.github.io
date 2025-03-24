@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
   background-color: #000000;
-  padding: 2rem;
+  
   font-family: "Ysabeau", sans-serif;
   background-image: url("/images/ComfyUI_00121_.webp");
   background-size: cover;
@@ -15,6 +15,7 @@ body {
 main {
   display: grid;
   grid-template-rows: 8rem auto 6rem;
+  margin: 2em;
 
   border-radius: 25px;
 
