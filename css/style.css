@@ -15,8 +15,7 @@ body {
 main {
   display: grid;
   grid-template-rows: 8rem auto 6rem;
-  margin: 2em;
-
+  
   border-radius: 25px;
 
   background-color: rgba(120, 120, 120, 0.257);
@@ -244,10 +243,7 @@ section {
 
 
 @media (min-width: 768px) {
-  main{
-    
-    height: 100vh;
-  }
+
   nav {
     display: flex;
     flex-direction: row;
@@ -287,6 +283,7 @@ section {
   }
   .container {
     display: grid;
+    grid-template-rows: unset;
     grid-template-columns: 1fr 2px 1fr; 
     align-items: center;
   }
