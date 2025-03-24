@@ -82,8 +82,8 @@ main {
 
 .line {
   width: 70%;
-  height: 1.2%;
-  background: rgb(255, 255, 255);
+  height: 0.2%;
+  background: rgb(0, 0, 0);
   margin: 1rem 0;
 }
 .top-section {
@@ -159,7 +159,7 @@ ul {
   text-align: center;
   padding: 2rem;
   padding-top: 2rem;
-  padding-bottom: 12rem;
+  padding-bottom: 2rem;
   border-radius: 10px;
   z-index: 10;
   top: 3rem;
@@ -205,26 +205,26 @@ section {
   justify-content: center;
   background-color: rgba(248, 248, 248, 0.533);
   backdrop-filter: blur(10px);
-  color: #fff;
+  color: #000000;
   text-align: center;
 }
 
 .right-box {
   background-color: rgba(0, 0, 0, 0);
-  color: #fff;
+  color: #000000;
   text-align: center;
 }
 
 .introduction {
   backdrop-filter: blur(1px); 
-  background-color: rgba(87, 87, 87, 0.27);
+  background-color: rgba(255, 255, 255, 0.15);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
   
   justify-content: center;
-  color: #fff;
+  color: #000000;
   text-align: center;
   border-radius: 25px 25px 0px 0px;
 }
@@ -232,14 +232,14 @@ section {
 .footer {
   
   width: 100%;
-  padding: 1.4rem;
+  padding: 1.1rem;
   text-align: center;
   font-size: 1rem; 
-  color: #fff;
+  color: #ffffff;
 
   background-image: linear-gradient(
     to bottom,
-    rgba(91, 91, 91, 0.24),rgba(96, 96, 96, 0.144),rgba(128, 128, 128, 0.25),
+    rgba(255, 255, 255, 0.15),rgba(96, 96, 96, 0.144),rgba(128, 128, 128, 0.25),
     rgba(213, 213, 213, 0.423)
   );
 }
@@ -260,14 +260,14 @@ section {
 .top-section , .arch , .cool , .like  ,p , .line {
 
   
-  color: #fff;
+  color: #000000;
 }
 
 
 @media (min-width: 768px) {
   main{
     
-    grid-template-rows: 7rem 73% 5.2rem;
+    grid-template-rows: 9rem 74.5% 3.5rem;
   }
 
   nav {
@@ -335,6 +335,7 @@ section {
   }
   .footer {
     color: rgb(255, 255, 255);
+    border-top: 1px solid rgb(255, 255, 255); 
     background-color: rgba(255, 255, 255, 0.133);
     border-radius: 0px 0px 25px 25px;
 
