@@ -82,8 +82,8 @@ main {
 
 .line {
   width: 70%;
-  height: 2px;
-  background: rgb(3, 3, 3);
+  height: 1.2%;
+  background: rgb(255, 255, 255);
   margin: 1rem 0;
 }
 .top-section {
@@ -159,7 +159,7 @@ ul {
   text-align: center;
   padding: 2rem;
   padding-top: 2rem;
-  padding-bottom: 21rem;
+  padding-bottom: 12rem;
   border-radius: 10px;
   z-index: 10;
   top: 3rem;
@@ -184,7 +184,7 @@ nav ul li a {
   font-size: 1.2rem;
 }
 .img-container {
-  width: 18rem;
+  width: 50%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 25px;
@@ -203,7 +203,7 @@ nav ul li a {
 section {
   display: grid;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.533);
+  background-color: rgba(248, 248, 248, 0.533);
   backdrop-filter: blur(10px);
   color: #fff;
   text-align: center;
@@ -217,7 +217,7 @@ section {
 
 .introduction {
   backdrop-filter: blur(1px); 
-  background-color: rgba(0, 0, 0, 0.093);
+  background-color: rgba(87, 87, 87, 0.27);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,8 +239,8 @@ section {
 
   background-image: linear-gradient(
     to bottom,
-    rgba(91, 91, 91, 0.125),rgba(72, 72, 72, 0.144),
-    rgba(121, 121, 121, 0.155)
+    rgba(91, 91, 91, 0.24),rgba(96, 96, 96, 0.144),rgba(128, 128, 128, 0.25),
+    rgba(213, 213, 213, 0.423)
   );
 }
 
@@ -258,6 +258,7 @@ section {
   gap: 1rem;
 }
 .top-section , .arch , .cool , .like  ,p , .line {
+
   
   color: #fff;
 }
@@ -314,7 +315,7 @@ section {
   }
   .separator{
     height: 60%;
-    width: 0.09rem;
+    width: 0.9%;
     background-color: #fff;
   }
 
@@ -342,5 +343,8 @@ section {
       rgba(255, 255, 255, 0),
       rgba(110, 110, 110, 0)
     );
+  }
+  .line{
+    height: 1.9%;
   }
 }
