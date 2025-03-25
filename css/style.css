@@ -3,10 +3,7 @@ body {
   background-color: #000000;
   
   font-family: "Ysabeau", sans-serif;
-  background-image: url("/images/ComfyUI_00121_.webp");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+
   min-height: 100vh;
   padding: 2em;
   display: grid;
