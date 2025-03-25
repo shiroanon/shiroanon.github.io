@@ -1,9 +1,7 @@
 /* Base Styles */
 body {
-  background-color: #000000;
-  
+  background-color: #000000; 
   font-family: "Ysabeau", sans-serif;
-
   min-height: 100vh;
   padding: 2em;
   display: grid;
@@ -11,10 +9,10 @@ body {
 }
 
 
+
 main {
   display: grid;
   grid-template-rows: 8rem auto 6rem;
-  
   border-radius: 25px;
 
   background-color: rgba(120, 120, 120, 0.257);
