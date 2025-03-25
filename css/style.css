@@ -267,7 +267,7 @@ section {
 @media (min-width: 768px) {
   main{
     
-    grid-template-rows: 9rem 74.5% 3.5rem;
+    grid-template-rows: 9rem 10fr 1fr ;
   }
 
   nav {
